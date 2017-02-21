@@ -1,22 +1,22 @@
 var bio = {
     name: 'Tod McChesney',
     role: 'Front-End Web Developer',
-    contact: [
-        '+41 79 123 4567',
-        'tod@example.com',
-        'https://github.com/TodMcChesney',
-        'Geneva, Switzerland'
-    ],
-    picture: 'images/profile.jpg',
+    contact: {
+        mobile: '+41 79 123 4567',
+        email: 'tod@example.com',
+        github: 'https://github.com/TodMcChesney',
+        location: 'Geneva, Switzerland'
+    },
     message: 'I am passionate about front-end web development.',
-    skills: ['HTML', 'CSS', 'JavaScript']
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    picture: 'images/profile.jpg'
 };
 var formattedName = HTMLheaderName.replace('%data%', bio.name);
 var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
-var formattedMobile = HTMLmobile.replace('%data%', bio.contact[0]);
-var formattedEmail = HTMLemail.replace('%data%', bio.contact[1]);
-var githubURL = HTMLgithub.replace('%data%', bio.contact[2]);
-var formattedLocation = HTMLlocation.replace('%data%', bio.contact[3]);
+var formattedMobile = HTMLmobile.replace('%data%', bio.contact.mobile);
+var formattedEmail = HTMLemail.replace('%data%', bio.contact.email);
+var githubURL = HTMLgithub.replace('%data%', bio.contact.github);
+var formattedLocation = HTMLlocation.replace('%data%', bio.contact.location);
 var bioPic = HTMLbioPic.replace('%data%', bio.picture);
 var welcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.message);
 var skillHTML = HTMLskills.replace('%data%', bio.skills[0]);
