@@ -38,32 +38,37 @@ var projects = {
 var bio = {
     name: 'Tod McChesney',
     role: 'Front-End Web Developer',
+    welcomeMessage: 'I am passionate about front-end web development.',
+    biopic: 'images/profile.jpg'
     contacts: {
         mobile: '+41 79 123 4567',
         email: 'tod@example.com',
         github: 'https://github.com/TodMcChesney',
         location: 'Geneva, Switzerland'
     },
-    welcomeMessage: 'I am passionate about front-end web development.',
     skills: ['HTML', 'CSS', 'JavaScript'],
-    biopic: 'images/profile.jpg'
 };
 
-var education = [
-    {
-        name: 'GED',
-        location: 'Birmingham, Alabama',
-        dates: 'Jan 1990'
-    }
-],
-[
-    {
-        title: 'Front-End Web Development',
-        school: 'Treehouse',
-        dates: 'Apr 2015',
-        url: 'https://teamtreehouse.com/todmcchesney'
-    }
-];
+var education = {
+    schools: [
+        {
+            name: 'GED',
+            location: 'Birmingham, Alabama',
+            degree: 'Diploma',
+            dates: 1990,
+            url: 'http://example.com'
+            majors: ['General']
+        }
+    ],
+    onlineCourses: [
+        {
+            title: 'Front-End Web Development',
+            school: 'Treehouse',
+            dates: 2015,
+            url: 'https://teamtreehouse.com/todmcchesney'
+        }
+    ]
+};
 
 
 // var formattedName = HTMLheaderName.replace('%data%', bio.name);
