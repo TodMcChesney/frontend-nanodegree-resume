@@ -85,7 +85,7 @@ $('#header').prepend(formattedName);
 $('#header').append(bioPic);
 $('#header').append(welcomeMsg);
 
-// Header contact info
+// Header contact
 $('#topContacts').append(formattedMobile);
 $('#topContacts').append(formattedEmail);
 $('#topContacts').append(githubURL);
@@ -153,7 +153,6 @@ $(document).click(function(loc) {
 });
 
 // internationalize button
-$('#main').append(internationalizeButton);
 function inName(oldName) {
     var finalName;
     var names = oldName.split(" ");
@@ -162,3 +161,8 @@ function inName(oldName) {
     finalName = names.join(" ");
     return finalName;
 }
+
+$('#main').append(internationalizeButton);
+
+// Google map
+// $('#mapDiv').append(googleMap);
