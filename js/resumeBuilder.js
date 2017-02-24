@@ -73,36 +73,35 @@ var education = {
 // Header section
 var formattedName = HTMLheaderName.replace('%data%', bio.name);
 var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
-var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
-var githubURL = HTMLgithub.replace('%data%', bio.contacts.github);
-var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
-var bioPic = HTMLbioPic.replace('%data%', bio.biopic);
-var welcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-
+var formattedBioPic = HTMLbioPic.replace('%data%', bio.biopic);
+var formattedWelcomeMessage = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
 $('#header').prepend(formattedRole);
 $('#header').prepend(formattedName);
-$('#header').append(bioPic);
-$('#header').append(welcomeMsg);
+$('#header').append(formattedBioPic);
+$('#header').append(formattedWelcomeMessage);
+
+var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
+var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
+var formattedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
+var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 
 // Header contact
 $('#topContacts').append(formattedMobile);
 $('#topContacts').append(formattedEmail);
-$('#topContacts').append(githubURL);
+$('#topContacts').append(formattedGithub);
 $('#topContacts').append(formattedLocation);
 
 // Footer contact info
 $('#footerContacts').append(formattedMobile);
 $('#footerContacts').append(formattedEmail);
-$('#footerContacts').append(githubURL);
+$('#footerContacts').append(formattedGithub);
 $('#footerContacts').append(formattedLocation);
 
-if (bio.skills.length > 0) {
-    $('#header').append(HTMLskillsStart);
-    for (var i = 0; i < bio.skills.length; i++) {
-        var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
-        $('#skills:last').append(formattedSkill);
-    }
+$('#header').append(HTMLskillsStart);
+
+for (var i = 0; i < bio.skills.length; i++) {
+    var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
+    $('#skills:last').append(formattedSkill);
 }
 
 // Work experience section
@@ -165,4 +164,4 @@ function inName(oldName) {
 $('#main').append(internationalizeButton);
 
 // Google map
-// $('#mapDiv').append(googleMap);
+$('#mapDiv').append(googleMap);
