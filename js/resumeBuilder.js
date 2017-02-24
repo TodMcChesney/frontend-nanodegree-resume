@@ -75,28 +75,28 @@ var formattedName = HTMLheaderName.replace('%data%', bio.name);
 var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
 var formattedBioPic = HTMLbioPic.replace('%data%', bio.biopic);
 var formattedWelcomeMessage = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+
 $('#header').prepend(formattedRole);
 $('#header').prepend(formattedName);
 $('#header').append(formattedBioPic);
 $('#header').append(formattedWelcomeMessage);
 
+// Contact info for header and footer
 var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
 var formattedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
 var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
+var idContacts = ['#topContacts', '#footerContacts'];
 
-// Header contact
-$('#topContacts').append(formattedMobile);
-$('#topContacts').append(formattedEmail);
-$('#topContacts').append(formattedGithub);
-$('#topContacts').append(formattedLocation);
+for (var i = 0; i < idContacts.length; i++) {
+    id = idContacts[i];
+    $(id).append(formattedMobile);
+    $(id).append(formattedEmail);
+    $(id).append(formattedGithub);
+    $(id).append(formattedLocation);
+}
 
-// Footer contact info
-$('#footerContacts').append(formattedMobile);
-$('#footerContacts').append(formattedEmail);
-$('#footerContacts').append(formattedGithub);
-$('#footerContacts').append(formattedLocation);
-
+// Skills
 $('#header').append(HTMLskillsStart);
 
 for (var i = 0; i < bio.skills.length; i++) {
