@@ -44,7 +44,7 @@ var work = {
 var projects = {
     projects: [
         {
-            title: 'AlabamaCupRaces.com Website',
+            title: 'Alabama Cup Racing Association Website',
             dates: 'Jan 2017',
             description: 'I designed and developed a fully responsive website for the Alabama Cup Racing Association.',
             images: ['images/acra-phone.png', 'images/acra-tablet.png', 'images/acra-desktop.png']
@@ -166,7 +166,7 @@ education.display = function() {
         var formattedOnlineCourse = HTMLonlineTitle.replace('%data%', education.onlineCourses[x].title) +
             HTMLonlineSchool.replace('%data%', education.onlineCourses[x].school) +
             HTMLonlineDates.replace('%data%', education.onlineCourses[x].dates) +
-            HTMLonlineURL.replace('%data%', education.onlineCourses[x].url);
+            HTMLonlineURL.replace(/%data%/g, education.onlineCourses[x].url);
         $('#education').append(HTMLschoolStart);
         $('.education-entry:last').append(formattedOnlineCourse);
     }
