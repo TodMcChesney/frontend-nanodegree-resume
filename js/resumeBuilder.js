@@ -47,7 +47,7 @@ var projects = {
             title: 'AlabamaCupRaces.com Website',
             dates: 'Jan 2017',
             description: 'I designed and developed a fully responsive website for the Alabama Cup Racing Association.',
-            images: ['images/acra-site.png']
+            images: ['images/acra-phone.png', 'images/acra-tablet.png', 'images/acra-desktop.png']
         }
     ]
 };
@@ -123,12 +123,12 @@ bio.display();
 // Display work
 work.display = function() {
     for (var i = 0; i < work.jobs.length; i++) {
-        $('#workExperience').append(HTMLworkStart);
         var formattedWork = HTMLworkEmployer.replace('%data%', work.jobs[i].employer) +
             HTMLworkTitle.replace('%data%', work.jobs[i].title) +
             HTMLworkDates.replace('%data%', work.jobs[i].dates) +
             HTMLworkLocation.replace('%data%', work.jobs[i].location) +
             HTMLworkDescription.replace('%data%', work.jobs[i].description);
+        $('#workExperience').append(HTMLworkStart);
         $('.work-entry:last').append(formattedWork);
     }
 };
@@ -137,10 +137,10 @@ work.display();
 // Display projects
 projects.display = function() {
     for (var i = 0; i < projects.projects.length; i++) {
-        $('#projects').append(HTMLprojectStart);
         var formattedProject = HTMLprojectTitle.replace('%data%', projects.projects[i].title) +
             HTMLprojectDates.replace('%data%', projects.projects[i].dates) +
             HTMLprojectDescription.replace('%data%', projects.projects[i].description);
+        $('#projects').append(HTMLprojectStart);
         $('.project-entry:last').append(formattedProject);
         for (var ii = 0; ii < projects.projects[i].images.length; ii++) {
             var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[i].images[ii]);
@@ -153,21 +153,21 @@ projects.display();
 // Display education
 education.display = function() {
     for (var i = 0; i < education.schools.length; i++) {
-        $('#education').append(HTMLschoolStart);
         var formattedSchool = HTMLschoolName.replace('%data%', education.schools[i].name) +
             HTMLschoolDegree.replace('%data%', education.schools[i].degree) +
             HTMLschoolLocation.replace('%data%', education.schools[i].location) +
             HTMLschoolDates.replace('%data%', education.schools[i].dates) +
             HTMLschoolMajor.replace('%data%', education.schools[i].majors);
+        $('#education').append(HTMLschoolStart);
         $('.education-entry:last').append(formattedSchool);
     }
     $('#education').append(HTMLonlineClasses);
     for (var x = 0; x < education.onlineCourses.length; x++) {
-        $('#education').append(HTMLschoolStart);
         var formattedOnlineCourse = HTMLonlineTitle.replace('%data%', education.onlineCourses[x].title) +
             HTMLonlineSchool.replace('%data%', education.onlineCourses[x].school) +
             HTMLonlineDates.replace('%data%', education.onlineCourses[x].dates) +
             HTMLonlineURL.replace('%data%', education.onlineCourses[x].url);
+        $('#education').append(HTMLschoolStart);
         $('.education-entry:last').append(formattedOnlineCourse);
     }
 };
