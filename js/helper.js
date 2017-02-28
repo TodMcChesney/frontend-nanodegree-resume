@@ -125,7 +125,6 @@ function initializeMap() {
         var infoWindow = new google.maps.InfoWindow({
             content: name
         });
-
         google.maps.event.addListener(marker, 'click', function() {
             infoWindow.setContent('<h4>' + marker.title + '</h4>');
             infoWindow.open(map, marker);
@@ -134,8 +133,10 @@ function initializeMap() {
         // this is where the pin actually gets added to the map.
         // bounds.extend() takes in a map location object
         bounds.extend(new google.maps.LatLng(lat, lon));
+
         // fit the map to the new marker
         map.fitBounds(bounds);
+
         // center the map
         map.setCenter(bounds.getCenter());
     }
@@ -162,6 +163,7 @@ function initializeMap() {
 
         // Iterates through the array of locations, creates a search object for each location
         locations.forEach(function(place) {
+
             // the search request object
             var request = {
                 query: place
@@ -182,7 +184,6 @@ function initializeMap() {
     // pinPoster(locations) creates pins on the map for each location in
     // the locations array
     pinPoster(locations);
-
 }
 
 // Calls the initializeMap() function when the page loads
@@ -191,6 +192,7 @@ window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
+
     //Make sure the map bounds get updated on page resize
     map.fitBounds(mapBounds);
 });
