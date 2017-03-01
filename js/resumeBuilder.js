@@ -6,6 +6,7 @@ var bio = {
         mobile: '+41 79 123 4567',
         email: 'tod@example.com',
         github: 'https://github.com/TodMcChesney',
+        twitter: 'https://twitter.com/example',
         location: 'Geneva, Switzerland'
     },
     welcomeMessage: 'I am passionate about front-end web development.',
@@ -60,32 +61,33 @@ var education = {
             location: 'Birmingham, Alabama',
             degree: 'Diploma',
             majors: ['General'],
-            dates: 1990
+            dates: '1990',
+            url: 'http://example.com'
         }
     ],
     onlineCourses: [
         {
             title: 'Front-End Web Development',
             school: 'Treehouse',
-            dates: 2015,
+            dates: '2015',
             url: 'https://teamtreehouse.com/todmcchesney'
         },
         {
             title: 'Web Design',
             school: 'Treehouse',
-            dates: 2016,
+            dates: '2016',
             url: 'https://teamtreehouse.com/todmcchesney'
         },
         {
             title: 'WordPress Development',
             school: 'Treehouse',
-            dates: 2016,
+            dates: '2016',
             url: 'https://teamtreehouse.com/todmcchesney'
         },
         {
             title: 'Full Stack JavaScript',
             school: 'Treehouse',
-            dates: 2016,
+            dates: '2016',
             url: 'https://teamtreehouse.com/todmcchesney'
         }
     ]
@@ -105,11 +107,7 @@ bio.display = function() {
         HTMLemail.replace('%data%', bio.contacts.email) +
         HTMLgithub.replace('%data%', bio.contacts.github) +
         HTMLlocation.replace('%data%', bio.contacts.location);
-    var idContacts = ['#topContacts', '#footerContacts'];
-    for (var i = 0; i < idContacts.length; i++) {
-        var id = idContacts[i];
-        $(id).append(formattedContacts);
-    }
+    $('#topContacts, #footerContacts').append(formattedContacts);
 
     // Skills
     $('#header').append(HTMLskillsStart);
