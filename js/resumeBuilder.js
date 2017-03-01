@@ -62,7 +62,7 @@ var education = {
             degree: 'Diploma',
             majors: ['General'],
             dates: '1990',
-            url: 'http://example.com'
+            url: 'http://www.bhamcityschools.org'
         }
     ],
     onlineCourses: [
@@ -106,6 +106,7 @@ bio.display = function() {
     var formattedContacts = HTMLmobile.replace('%data%', bio.contacts.mobile) +
         HTMLemail.replace('%data%', bio.contacts.email) +
         HTMLgithub.replace('%data%', bio.contacts.github) +
+        HTMLtwitter.replace('%data%', bio.contacts.twitter) +
         HTMLlocation.replace('%data%', bio.contacts.location);
     $('#topContacts, #footerContacts').append(formattedContacts);
 
@@ -151,7 +152,7 @@ projects.display();
 // Display education
 education.display = function() {
     for (var i = 0; i < education.schools.length; i++) {
-        var formattedSchool = HTMLschoolName.replace('%data%', education.schools[i].name) +
+        var formattedSchool = HTMLschoolName.replace('#', education.schools[i].url).replace('%data%', education.schools[i].name) +
             HTMLschoolDegree.replace('%data%', education.schools[i].degree) +
             HTMLschoolLocation.replace('%data%', education.schools[i].location) +
             HTMLschoolDates.replace('%data%', education.schools[i].dates) +
