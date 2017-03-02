@@ -48,7 +48,7 @@ This is the fun part. Here's where we generate the custom Google Map for the web
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
-var map;    // declares a global map variable
+var map; // declares a global map variable
 
 
 /*
@@ -107,10 +107,10 @@ function initializeMap() {
     function createMapMarker(placeData) {
 
         // The next lines save location data from the search result object to local variables
-        var lat = placeData.geometry.location.lat();  // latitude from the place service
-        var lon = placeData.geometry.location.lng();  // longitude from the place service
-        var name = placeData.formatted_address;   // name of the place from the place service
-        var bounds = window.mapBounds;            // current boundaries of the map window
+        var lat = placeData.geometry.location.lat(); // latitude from the place service
+        var lon = placeData.geometry.location.lng(); // longitude from the place service
+        var name = placeData.formatted_address; // name of the place from the place service
+        var bounds = window.mapBounds; // current boundaries of the map window
 
         // marker is an object with additional data about the pin for a single location
         var marker = new google.maps.Marker({

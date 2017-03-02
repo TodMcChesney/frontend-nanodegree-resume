@@ -16,8 +16,7 @@ var bio = {
 
 // Work object
 var work = {
-    jobs: [
-        {
+    jobs: [{
             employer: 'Self Employed',
             title: 'Front-End Web Developer',
             location: 'Geneva, Switzerland',
@@ -43,30 +42,25 @@ var work = {
 
 // Projects object
 var projects = {
-    projects: [
-        {
-            title: 'Alabama Cup Racing Association Website',
-            dates: 'Jan 2017',
-            description: 'I designed and developed a fully responsive website for the Alabama Cup Racing Association.',
-            images: ['images/acra-phone.png', 'images/acra-tablet.png', 'images/acra-desktop.png']
-        }
-    ]
+    projects: [{
+        title: 'Alabama Cup Racing Association Website',
+        dates: 'Jan 2017',
+        description: 'I designed and developed a fully responsive website for the Alabama Cup Racing Association.',
+        images: ['images/acra-phone.png', 'images/acra-tablet.png', 'images/acra-desktop.png']
+    }]
 };
 
 // Education object
 var education = {
-    schools: [
-        {
-            name: 'GED',
-            location: 'Birmingham, Alabama',
-            degree: 'Diploma',
-            majors: ['General'],
-            dates: '1990',
-            url: 'http://www.bhamcityschools.org'
-        }
-    ],
-    onlineCourses: [
-        {
+    schools: [{
+        name: 'GED',
+        location: 'Birmingham, Alabama',
+        degree: 'Diploma',
+        majors: ['General'],
+        dates: '1990',
+        url: 'http://www.bhamcityschools.org'
+    }],
+    onlineCourses: [{
             title: 'Front-End Web Development',
             school: 'Treehouse',
             dates: '2015',
